@@ -1,0 +1,129 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perpustakaan Nasional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: #ff5e00;
+        }
+        h2 {
+            color: #ff5e00;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 10px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            
+        }
+        button {
+            background-color: #ff5e00;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff5e00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Perpustakaan Nasional</h1>
+
+    <!-- Tabel Bahan Buku -->
+    <center>
+    <h2>Tabel Bahan Buku</h2>
+</center>
+    <table>
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Pengarang</th>
+                <th>Tahun Terbit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Algoritma Pemrograman</td>
+                <td>John Doe</td>
+                <td>2022</td>
+            </tr>
+            <tr>
+                <td>Sejarah Indonesia</td>
+                <td>Jane Smith</td>
+                <td>2020</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <!-- Form Pemesanan Buku -->
+  <center><h2>Form Pemesanan Buku</h2></center>  
+    <form action="submit.HTML" method="post">
+        <label for="judul">Judul Buku:</label>
+        <input type="text" id="judul" name="judul" required><br>
+        <label for="nama">Nomor Peminjaman:</label>
+        <input type="text" id="nama" name="nama" required><br>
+        <label for="alamat">Tanggal Peminjaman:</label>
+        <input type="text" id="alamat" name="alamat" required><br>
+        <button type="submit">Pesan</button>
+    </form>
+
+    <!-- Form Perpanjangan Buku -->
+    <center><h2>Form Perpanjangan Buku</h2></center>  
+    <form action="submit.HTML" method="post">
+        <label for="nomor_pinjam">Nomor Peminjaman:</label>
+        <input type="text" id="nomor_pinjam" name="nomor_pinjam" required><br>
+        <label for="tanggal_perpanjangan">Tanggal Perpanjangan:</label>
+        <input type="date" id="tanggal_perpanjangan" name="tanggal_perpanjangan" required><br>
+        <button type="submit">Perpanjang</button>
+    </form>
+
+ <!-- Form Pengembalian Buku -->
+ <center><h2>Form Pengembalian Buku</h2></center>  
+ <form action="submit.HTML" method="post">
+     <label for="nomor_peminjaman">Nomor Peminjaman:</label>
+     <input type="text" id="nomor_pinjam" name="nomor_pinjam" required><br>
+     <label for="tanggal_pengembalian">Tanggal Pengembalian:</label>
+     <input type="date" id="tanggal_pengembalian" name="tanggal_pengembalian" required><br>
+     <button type="submit">Pengembalian</button>
+ </form>
+
+</body>
+</html>
